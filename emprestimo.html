@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ler Bem - Empréstimos</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <div class="pagina">
+    <aside class="menu">
+      <h1>📚 Ler Bem</h1>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="usuarios.html">Usuários</a>
+        <a href="livros.html">Livros</a>
+        <a href="emprestimos.html" class="ativo">Empréstimos</a>
+      </nav>
+      <button onclick="sair()">Sair</button>
+    </aside>
+    <main class="conteudo">
+      <h2>Empréstimos</h2>
+      <div class="card-form">
+        <h3>Novo Empréstimo</h3>
+        <div class="grid-2">
+          <div class="campo">
+            <label>Usuário</label>
+            <select id="usuarioId">
+              <option value="">Selecione um usuário</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label>Livro</label>
+            <select id="livroId">
+              <option value="">Selecione um livro</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label>Data do Empréstimo</label>
+            <input type="date" id="dataEmprestimo">
+          </div>
+          <div class="campo">
+            <label>Data de Devolução</label>
+            <input type="date" id="dataDevolucao">
+          </div>
+        </div>
+        <button onclick="cadastrarEmprestimo()">Registrar</button>
+      </div>
+      <div class="card-tabela">
+        <h3>Empréstimos</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Usuário</th>
+              <th>Livro</th>
+              <th>Empréstimo</th>
+              <th>Devolução</th>
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaEmprestimos">
+            <tr><td colspan="6">Carregando...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <script src="emprestimos.js"></script>
+</body>
+</html>
