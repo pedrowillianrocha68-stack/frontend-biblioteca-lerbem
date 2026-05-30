@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>📚 Ler Bem</h1>
+      <h2>Entrar na conta</h2>
+
+      <div class="campo">
+        <label>Usuário</label>
+        <input type="text" id="usuario" placeholder="Digite seu usuário">
+      </div>
+
+      <div class="campo">
+        <label>Senha</label>
+        <input type="password" id="senha" placeholder="Digite sua senha">
+      </div>
+
+      <button onclick="fazerLogin()">Entrar</button>
+      <p id="erro"></p>
+    </div>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>
