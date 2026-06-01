@@ -1,30 +1,72 @@
 <!DOCTYPE html>
-<html lang="pt-Br"
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="widht=device-widht,initial-scale=1.0">
-    <title>Ler bem - Dashboard</title>
-    <link rel="stylesheet"href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweealrt2@11"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ler Bem - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-
 <body>
-<div class="pagina">
-<aside class="menu">
-    <h1>📚 Ler Bem </h1>
-    <nav>
-<a href="dashboard.html" class="ativo">Dashboard</a>
-<a href="usuarios.html">Usuários</a>
-<a href="livros.html">Livros</a>
-<a href="emprestimo.html"></a>
-    </nav>
- <button onclick="sair"
+  <div class="pagina">
 
+    <aside class="menu">
+      <h1>📚 Ler Bem</h1>
+      <nav>
+        <a href="dashboard.html" class="ativo">Dashboard</a>
+        <a href="usuarios.html">Usuários</a>
+        <a href="livros.html">Livros</a>
+        <a href="emprestimos.html">Empréstimos</a>
+      </nav>
+      <button onclick="sair()">Sair</button>
+    </aside>
 
+    <main class="conteudo">
+      <h2>Dashboard</h2>
 
+      <div class="cards-stats">
+        <div class="stat">
+          <span class="stat-icone">👥</span>
+          <div>
+            <p class="stat-numero" id="totalUsuarios">--</p>
+            <p class="stat-label">Usuários</p>
+          </div>
+        </div>
+        <div class="stat">
+          <span class="stat-icone">📖</span>
+          <div>
+            <p class="stat-numero" id="totalLivros">--</p>
+            <p class="stat-label">Livros</p>
+          </div>
+        </div>
+        <div class="stat">
+          <span class="stat-icone">🔄</span>
+          <div>
+            <p class="stat-numero" id="totalEmprestimos">--</p>
+            <p class="stat-label">Empréstimos ativos</p>
+          </div>
+        </div>
+      </div>
 
+      <div class="card-tabela">
+        <h3>Devoluções pendentes</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Usuário</th>
+              <th>Livro</th>
+              <th>Data empréstimo</th>
+              <th>Devolução</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaPendentes">
+            <tr><td colspan="4">Carregando...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
 
-
-
-
+  </div>
+  <script src="dashboard.js"></script>
 </body>
+</html>
